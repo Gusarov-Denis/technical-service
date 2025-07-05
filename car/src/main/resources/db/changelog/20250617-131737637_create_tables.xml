@@ -1,0 +1,59 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="gusarov (generated)" id="1750166260458-1">
+        <createTable tableName="car">
+            <column name="id" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="carPK"/>
+            </column>
+            <column name="actual" type="BOOLEAN"/>
+            <column name="date_created" type="TIMESTAMP WITH TIME ZONE"/>
+            <column name="last_updated" type="TIMESTAMP WITH TIME ZONE"/>
+            <column name="version" type="BIGINT"/>
+            <column name="login" type="VARCHAR(100)"/>
+            <column name="reg_number" type="VARCHAR(10)"/>
+            <column name="mark_model_id" type="UUID"/>
+            <column name="motor_type_id" type="UUID"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1750166260458-2">
+        <createTable tableName="mark_model">
+            <column name="id" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="mark_modelPK"/>
+            </column>
+            <column name="actual" type="BOOLEAN"/>
+            <column name="name" type="VARCHAR(100)"/>
+            <column name="sys_name" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1750166260458-3">
+        <createTable tableName="motor_type">
+            <column name="id" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="motor_typePK"/>
+            </column>
+            <column name="actual" type="BOOLEAN"/>
+            <column name="name" type="VARCHAR(100)"/>
+            <column name="sys_name" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1750166260458-4">
+        <addUniqueConstraint columnNames="reg_number" constraintName="UC_CARREG_NUMBER_COL" tableName="car"/>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1750166260458-5">
+        <addUniqueConstraint columnNames="name" constraintName="UC_MARK_MODELNAME_COL" tableName="mark_model"/>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1750166260458-6">
+        <addUniqueConstraint columnNames="sys_name" constraintName="UC_MARK_MODELSYS_NAME_COL" tableName="mark_model"/>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1750166260458-7">
+        <addUniqueConstraint columnNames="name" constraintName="UC_MOTOR_TYPENAME_COL" tableName="motor_type"/>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1750166260458-8">
+        <addUniqueConstraint columnNames="sys_name" constraintName="UC_MOTOR_TYPESYS_NAME_COL" tableName="motor_type"/>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1750166260458-9">
+        <addForeignKeyConstraint baseColumnNames="mark_model_id" baseTableName="car" constraintName="fk_car_mark_model_id" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="mark_model" validate="true"/>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1750166260458-10">
+        <addForeignKeyConstraint baseColumnNames="motor_type_id" baseTableName="car" constraintName="fk_car_motor_type_id" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="motor_type" validate="true"/>
+    </changeSet>
+</databaseChangeLog>

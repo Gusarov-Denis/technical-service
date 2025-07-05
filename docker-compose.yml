@@ -1,0 +1,94 @@
+services:
+  client-service:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    hostname: client-service
+    container_name: client-service
+    restart: "no"
+    ports:
+      - 8095:8095
+    networks:
+      - tsnet
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://10.0.103.1:6432/clientdb
+      
+  oil-service:
+    build:
+      context: ./oil
+      dockerfile: Dockerfile
+    hostname: oil-service
+    container_name: oil-service
+    restart: "no"
+    ports:
+      - 8096:8096
+    networks:
+      - tsnet
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://10.0.103.1:6432/oildb
+    
+  car-service:
+    build:
+      context: ./car
+      dockerfile: Dockerfile
+    hostname: car-service
+    container_name: car-service
+    restart: "no"
+    ports:
+      - 8097:8097
+    networks:
+      - tsnet
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://10.0.103.1:6432/cardb
+      
+  serv-service:
+    build:
+      context: ./serv
+      dockerfile: Dockerfile
+    hostname: serv-service
+    container_name: serv-service
+    restart: "no"
+    ports:
+      - 8098:8098
+    networks:
+      - tsnet
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://10.0.103.1:6432/servdb
+      - ORG_EXAMPLE_CLIENT_SERVICE=http://client-service:8095
+
+  prometheus:
+    image: prom/prometheus
+    depends_on:
+      - client-service
+      - oil-service
+      - car-service
+      - serv-service
+    container_name: prometheus
+    ports:
+      - 9090:9090
+    networks:
+      - tsnet
+    volumes:
+      - ./prometheus/:/etc/prometheus/
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    restart: always
+    hostname: prometheus
+
+  grafana:
+    image: grafana/grafana
+    depends_on:
+      - prometheus
+    ports:
+      - 3000:3000
+    volumes:
+      - ./grafana/:/etc/grafana/provisioning/
+    env_file:
+      - ./grafana/config.monitoring
+    networks:
+      - tsnet
+    restart: always
+
+networks:
+  tsnet:
+    driver: bridge

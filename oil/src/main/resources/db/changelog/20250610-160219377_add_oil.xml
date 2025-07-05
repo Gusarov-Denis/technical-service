@@ -1,0 +1,35 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+   <changeSet author="Gusarov (generated)" id="1749571342375-1">
+        <insert tableName="oil">
+            <column name="id" value="414f631c-9b9d-4c3a-9d1b-4e7329f9126d"/>
+            <column name="name" value="Eneos"/>
+            <column name="oil_type_id" value="ba54b3b7-1dab-41a8-976a-6bfe68d67d41"/>
+            <column name="oil_viscosity_id" value="ef8ac859-3ab8-49de-9d39-de0effc16a3a"/>
+            <column name="actual" valueBoolean="true"/>
+            <column name="version" valueNumeric="0"/>
+            <column name="date_created" valueDate="2025-06-10T19:59:52.27423"/>
+            <column name="last_updated" valueDate="2025-06-10T19:59:52.27423"/>
+        </insert>
+        <insert tableName="oil">
+            <column name="id" value="530a3dce-2b25-4da1-a05b-531e37a5978e"/>
+            <column name="name" value="Mobil"/>
+            <column name="oil_type_id" value="2394c156-ee47-4b79-9acd-e1ff07920754"/>
+            <column name="oil_viscosity_id" value="6df95196-4369-4866-8a8d-ffff3fcee2e2"/>
+            <column name="actual" valueBoolean="true"/>
+            <column name="version" valueNumeric="0"/>
+            <column name="date_created" valueDate="2025-06-10T19:59:52.27423"/>
+            <column name="last_updated" valueDate="2025-06-10T19:59:52.27423"/>
+        </insert>
+        <insert tableName="oil">
+            <column name="id" value="0a2aee7f-d149-4e8b-85fe-26ef670d2fb9"/>
+            <column name="name" value="Helix"/>
+            <column name="oil_type_id" value="13088de4-3a7e-4b5a-8c81-ba1977fd28d4"/>
+            <column name="oil_viscosity_id" value="9c6dff09-0426-4ce9-b61a-3ab173b72368"/>
+            <column name="actual" valueBoolean="true"/>
+            <column name="version" valueNumeric="0"/>
+            <column name="date_created" valueDate="2025-06-10T19:59:52.27423"/>
+            <column name="last_updated" valueDate="2025-06-10T19:59:52.27423"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,18 @@
+### prometheus
+GET http://localhost:8096/actuator/prometheus
+
+### get list
+GET http://localhost:8096/api/v1/oils
+
+### get item
+GET http://localhost:8096/api/v1/oils/9359583a-3a83-4b77-95b5-1a3ed0cf672e
+
+### create
+POST http://localhost:8096/api/v1/oils
+Content-Type: application/json
+
+{
+  "name":"oylo5",
+  "oilTypeId":"ba54b3b7-1dab-41a8-976a-6bfe68d67d41",
+  "oilViscosityId": "ef8ac859-3ab8-49de-9d39-de0effc16a3a"
+}

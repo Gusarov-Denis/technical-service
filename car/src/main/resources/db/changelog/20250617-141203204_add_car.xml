@@ -1,0 +1,16 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="gusarov (generated)" id="1750169526286-1">
+        <insert tableName="car">
+            <column name="id" value="3692993a-ac1f-4fea-8bc3-8a89d67031d5"/>
+            <column name="reg_number" value="o123qq47"/>
+            <column name="login" value="l1"/>
+            <column name="motor_type_id" value="be2a7dc4-fb32-4e98-80a7-801025bfa373"/>
+            <column name="mark_model_id" value="87ed5551-b718-4a81-9ad9-80a73882afea"/>
+            <column name="actual" valueBoolean="true"/>
+            <column name="version" valueNumeric="0"/>
+            <column name="date_created" valueDate="2025-06-10T19:59:52.27423"/>
+            <column name="last_updated" valueDate="2025-06-10T19:59:52.27423"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

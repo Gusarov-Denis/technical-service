@@ -1,0 +1,23 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="gusarov (generated)" id="1750168863832-1">
+        <insert tableName="mark_model">
+            <column name="id" value="87ed5551-b718-4a81-9ad9-80a73882afea"/>
+            <column name="name" value="Mitsubishi Outlander"/>
+            <column name="sys_name" value="mits_out"/>
+            <column name="actual" valueBoolean="true"/>
+        </insert>
+        <insert tableName="mark_model">
+            <column name="id" value="1cc7e5c2-da24-409c-80b2-46408d4b984c"/>
+            <column name="name" value="Tesla Model S"/>
+            <column name="sys_name" value="tesla_s"/>
+            <column name="actual" valueBoolean="true"/>
+        </insert>
+        <insert tableName="mark_model">
+            <column name="id" value="348f32b0-9ba4-47a9-8aec-c91362b6125b"/>
+            <column name="name" value="TANK 500"/>
+            <column name="sys_name" value="tank_500"/>
+            <column name="actual" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

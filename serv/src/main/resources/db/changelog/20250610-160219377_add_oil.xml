@@ -1,0 +1,15 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+   <changeSet author="Gusarov (generated)" id="1749571342375-1">
+        <insert tableName="to">
+            <column name="id" value="7bcd96d2-95b1-4eea-a317-e8fa4d2db515"/>
+            <column name="name" value="TO_2025 "/>
+            <column name="oil_type_id" value="ba54b3b7-1dab-41a8-976a-6bfe68d67d41"/>
+            <column name="oil_viscosity_id" value="ef8ac859-3ab8-49de-9d39-de0effc16a3a"/>
+            <column name="actual" valueBoolean="true"/>
+            <column name="version" valueNumeric="0"/>
+            <column name="date_created" valueDate="2025-06-10T19:59:52.27423"/>
+            <column name="last_updated" valueDate="2025-06-10T19:59:52.27423"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

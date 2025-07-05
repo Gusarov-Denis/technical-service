@@ -1,0 +1,10 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <include file="/db/changelog/20250619-111459330_create_table.xml" relativeToChangelogFile="false"></include>
+    <include file="/db/changelog/20250619-113010597_add_data_to_status.xml" relativeToChangelogFile="false"></include>
+<!--    <include file="/db/changelog/20250610-160219377_add_oil.xml" relativeToChangelogFile="false"></include>-->
+</databaseChangeLog>

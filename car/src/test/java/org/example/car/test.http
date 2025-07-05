@@ -1,0 +1,22 @@
+### prometheus
+GET http://localhost:8097/actuator/prometheus
+
+### get list
+GET http://localhost:8097/api/v1/cars
+
+### get item
+GET http://localhost:8097/api/v1/cars/3692993a-ac1f-4fea-8bc3-8a89d67031d5
+
+### get by RegNumber
+GET http://localhost:8097/api/v1/cars/byregnumber/o123qq47
+
+### create
+POST http://localhost:8097/api/v1/cars
+Content-Type: application/json
+
+{
+  "regNumber":"o111xx98",
+  "login":"l16",
+  "motorTypeId":"7fbc3fed-9563-4753-b0e4-70b340f530fa",
+  "markModelId": "348f32b0-9ba4-47a9-8aec-c91362b6125b"
+}

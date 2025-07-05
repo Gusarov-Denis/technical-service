@@ -1,0 +1,32 @@
+### prometheus
+GET http://localhost:8098/actuator/prometheus
+
+### get list
+GET http://localhost:8098/api/v1/tos
+
+### create
+POST http://localhost:8098/api/v1/tos
+Content-Type: application/json
+
+{
+  "name":"to9",
+  "login":"l1",
+  "oilId":"414f631c-9b9d-4c3a-9d1b-4e7329f9126d",
+  "carId": "3692993a-ac1f-4fea-8bc3-8a89d67031d5",
+  "mileage": 10,
+  "toStatusId": "c409b9aa-4643-4115-a308-c829c492291f"
+}
+
+### createWithDateTO
+POST http://localhost:8098/api/v1/tos
+Content-Type: application/json
+
+{
+  "name":"to2",
+  "login":"l1",
+  "oilId":"414f631c-9b9d-4c3a-9d1b-4e7329f9126d",
+  "carId": "3692993a-ac1f-4fea-8bc3-8a89d67031d5",
+  "dateTo": "2025-07-02T17:43:00.000+03:00",
+  "mileage": 11,
+  "toStatusId": "da7ee44a-cb0b-4c63-bf4f-f51632fc3606"
+}

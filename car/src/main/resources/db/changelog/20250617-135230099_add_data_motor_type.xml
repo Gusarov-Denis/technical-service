@@ -1,0 +1,36 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="gusarov (generated)" id="1750168353475-1">
+        <insert tableName="motor_type">
+            <column name="id" value="be2a7dc4-fb32-4e98-80a7-801025bfa373"/>
+            <column name="name" value="Бензин"/>
+            <column name="sys_name" value="benz"/>
+            <column name="actual" valueBoolean="true"/>
+        </insert>
+        <insert tableName="motor_type">
+            <column name="id" value="5d136353-e5db-4c93-a1be-01f4555822d0"/>
+            <column name="name" value="Дизель"/>
+            <column name="sys_name" value="diesel"/>
+            <column name="actual" valueBoolean="true"/>
+        </insert>
+        <insert tableName="motor_type">
+            <column name="id" value="08314394-4d95-40fc-9924-a181a41b6cee"/>
+            <column name="name" value="Газ"/>
+            <column name="sys_name" value="gas"/>
+            <column name="actual" valueBoolean="true"/>
+        </insert>
+        <insert tableName="motor_type">
+            <column name="id" value="7fbc3fed-9563-4753-b0e4-70b340f530fa"/>
+            <column name="name" value="Гибрид"/>
+            <column name="sys_name" value="hubrid"/>
+            <column name="actual" valueBoolean="true"/>
+        </insert>
+        <insert tableName="motor_type">
+            <column name="id" value="0a20d042-4ac4-4f18-b42e-680aadb6f6ff"/>
+            <column name="name" value="Электричество"/>
+            <column name="sys_name" value="electro"/>
+            <column name="actual" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

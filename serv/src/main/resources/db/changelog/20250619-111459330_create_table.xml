@@ -1,0 +1,43 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="gusarov (generated)" id="1750331702184-1">
+        <createTable tableName="to">
+            <column name="id" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="toPK"/>
+            </column>
+            <column name="actual" type="BOOLEAN"/>
+            <column name="date_created" type="TIMESTAMP WITH TIME ZONE"/>
+            <column name="last_updated" type="TIMESTAMP WITH TIME ZONE"/>
+            <column name="version" type="BIGINT"/>
+            <column name="car_id" type="UUID"/>
+            <column name="date_to" type="TIMESTAMP WITH TIME ZONE"/>
+            <column name="login" type="VARCHAR(100)"/>
+            <column name="mileage" type="INTEGER"/>
+            <column name="name" type="VARCHAR(100)"/>
+            <column name="oil_id" type="UUID"/>
+            <column name="to_status_id" type="UUID"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1750331702184-2">
+        <createTable tableName="to_status">
+            <column name="id" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="to_statusPK"/>
+            </column>
+            <column name="actual" type="BOOLEAN"/>
+            <column name="name" type="VARCHAR(100)"/>
+            <column name="sys_name" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1750331702184-3">
+        <addUniqueConstraint columnNames="name" constraintName="UC_TONAME_COL" tableName="to"/>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1750331702184-4">
+        <addUniqueConstraint columnNames="name" constraintName="UC_TO_STATUSNAME_COL" tableName="to_status"/>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1750331702184-5">
+        <addUniqueConstraint columnNames="sys_name" constraintName="UC_TO_STATUSSYS_NAME_COL" tableName="to_status"/>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1750331702184-6">
+        <addForeignKeyConstraint baseColumnNames="to_status_id" baseTableName="to" constraintName="fk_to_to_status_id" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="to_status" validate="true"/>
+    </changeSet>
+</databaseChangeLog>

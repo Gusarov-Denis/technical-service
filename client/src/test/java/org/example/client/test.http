@@ -1,0 +1,15 @@
+### prometheus
+GET http://localhost:8095/actuator/prometheus
+
+### create user
+POST http://localhost:8095/api/v1/users
+Content-Type: application/json
+
+{
+  "login":"l2",
+  "password":"1qazxsw23edc1qazxsw23edc1qazxsw23edc",
+  "email": "l2@mail.ru"
+}
+
+### get email by login
+GET http://localhost:8095/api/v1/users/emailbylogin/l1

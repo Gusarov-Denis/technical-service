@@ -1,0 +1,43 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="Gusarov (generated)" id="1749570193887-1">
+        <insert tableName="oil_viscosity">
+            <column name="id" value="ef8ac859-3ab8-49de-9d39-de0effc16a3a"/>
+            <column name="name" value="5w10"/>
+            <column name="sys_name" value="5w10"/>
+            <column name="actual" valueBoolean="true"/>
+        </insert>
+        <insert tableName="oil_viscosity">
+            <column name="id" value="6df95196-4369-4866-8a8d-ffff3fcee2e2"/>
+            <column name="name" value="5w20"/>
+            <column name="sys_name" value="5w20"/>
+            <column name="actual" valueBoolean="true"/>
+        </insert>
+        <insert tableName="oil_viscosity">
+            <column name="id" value="45e1b239-238a-4a7d-b30c-2c2b226bd89d"/>
+            <column name="name" value="5w30"/>
+            <column name="sys_name" value="5w30"/>
+            <column name="actual" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Gusarov (generated)" id="1749570193887-2">
+        <insert tableName="oil_viscosity">
+            <column name="id" value="ad4999ba-6687-47c4-be1a-05358b221841"/>
+            <column name="name" value="10w10"/>
+            <column name="sys_name" value="10w10"/>
+            <column name="actual" valueBoolean="true"/>
+        </insert>
+        <insert tableName="oil_viscosity">
+            <column name="id" value="ffb6ea7d-e05f-4923-9037-1782eb97082c"/>
+            <column name="name" value="10w20"/>
+            <column name="sys_name" value="10w20"/>
+            <column name="actual" valueBoolean="true"/>
+        </insert>
+        <insert tableName="oil_viscosity">
+            <column name="id" value="9c6dff09-0426-4ce9-b61a-3ab173b72368"/>
+            <column name="name" value="10w30"/>
+            <column name="sys_name" value="10w30"/>
+            <column name="actual" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

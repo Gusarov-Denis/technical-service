@@ -1,0 +1,58 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="gusarov (generated)" id="1749571056170-1">
+        <createTable tableName="oil">
+            <column name="id" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="oilPK"/>
+            </column>
+            <column name="actual" type="BOOLEAN"/>
+            <column name="date_created" type="TIMESTAMP WITH TIME ZONE"/>
+            <column name="last_updated" type="TIMESTAMP WITH TIME ZONE"/>
+            <column name="version" type="BIGINT"/>
+            <column name="name" type="VARCHAR(100)"/>
+            <column name="oil_type_id" type="UUID"/>
+            <column name="oil_viscosity_id" type="UUID"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1749571056170-2">
+        <createTable tableName="oil_type">
+            <column name="id" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="oil_typePK"/>
+            </column>
+            <column name="actual" type="BOOLEAN"/>
+            <column name="name" type="VARCHAR(100)"/>
+            <column name="sys_name" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1749571056170-3">
+        <createTable tableName="oil_viscosity">
+            <column name="id" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="oil_viscosityPK"/>
+            </column>
+            <column name="actual" type="BOOLEAN"/>
+            <column name="name" type="VARCHAR(100)"/>
+            <column name="sys_name" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1749571056170-4">
+        <addUniqueConstraint columnNames="name" constraintName="UC_OILNAME_COL" tableName="oil"/>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1749571056170-5">
+        <addUniqueConstraint columnNames="name" constraintName="UC_OIL_TYPENAME_COL" tableName="oil_type"/>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1749571056170-6">
+        <addUniqueConstraint columnNames="sys_name" constraintName="UC_OIL_TYPESYS_NAME_COL" tableName="oil_type"/>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1749571056170-7">
+        <addUniqueConstraint columnNames="name" constraintName="UC_OIL_VISCOSITYNAME_COL" tableName="oil_viscosity"/>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1749571056170-8">
+        <addUniqueConstraint columnNames="sys_name" constraintName="UC_OIL_VISCOSITYSYS_NAME_COL" tableName="oil_viscosity"/>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1749571056170-9">
+        <addForeignKeyConstraint baseColumnNames="oil_type_id" baseTableName="oil" constraintName="fk_oil_oil_type_id" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="oil_type" validate="true"/>
+    </changeSet>
+    <changeSet author="gusarov (generated)" id="1749571056170-10">
+        <addForeignKeyConstraint baseColumnNames="oil_viscosity_id" baseTableName="oil" constraintName="fk_oil_oil_viscosity_id" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="oil_viscosity" validate="true"/>
+    </changeSet>
+</databaseChangeLog>

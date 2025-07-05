@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "description": "TO object schema",
+  "type": "object",
+  "required": [
+    "name",
+    "login",
+    "oilId",
+    "carId",
+    "mileage",
+    "toStatusId"
+  ],
+  "properties": {
+    "name": {
+      "description": "Наименование",
+      "type": "string",
+      "maxLength": 100
+    },
+    "login": {
+      "description": "Логин клиента",
+      "type": "string",
+      "maxLength": 100
+    },
+    "oilId": {
+      "description": "Ид масла.",
+      "type": "string",
+      "format": "uuid",
+      "example": "ba54b3b7-1dab-41a8-976a-6bfe68d67d41"
+    },
+    "carId": {
+      "description": "Ид машины.",
+      "type": "string",
+      "format": "uuid",
+      "example": "ef8ac859-3ab8-49de-9d39-de0effc16a3a"
+    },
+    "dateTo": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2023-09-15T15:30:00.000-05:00",
+      "description": "format yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    },
+    "mileage": {
+      "description": "Пробег",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "example": 10000
+    },
+    "toStatusId": {
+      "description": "Ид статуса.",
+      "type": "string",
+      "format": "uuid",
+      "example": "ba54b3b7-1dab-41a8-976a-6bfe68d67d41"
+    }
+  }
+}

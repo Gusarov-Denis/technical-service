@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "description": "Oil object schema",
+  "type": "object",
+  "required": [
+    "name",
+    "oilTypeId",
+    "oilViscosityId"
+  ],
+  "properties": {
+    "name": {
+      "description": "Наименование",
+      "type": "string",
+      "maxLength": 100
+    },
+    "oilTypeId": {
+      "description": "Ид типа масла.",
+      "type": "string",
+      "format": "uuid",
+      "example": "ba54b3b7-1dab-41a8-976a-6bfe68d67d41"
+    },
+    "oilViscosityId": {
+      "description": "Ид вязкости масла.",
+      "type": "string",
+      "format": "uuid",
+      "example": "ef8ac859-3ab8-49de-9d39-de0effc16a3a"
+    }
+  }
+}

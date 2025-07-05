@@ -1,0 +1,23 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="Gusarov (generated)" id="1749566311363-1">
+    <insert tableName="oil_type">
+        <column name="id" value="ba54b3b7-1dab-41a8-976a-6bfe68d67d41"/>
+        <column name="name" value="Синтетическое"/>
+        <column name="sys_name" value="synthetic"/>
+        <column name="actual" valueBoolean="true"/>
+    </insert>
+    <insert tableName="oil_type">
+        <column name="id" value="2394c156-ee47-4b79-9acd-e1ff07920754"/>
+        <column name="name" value="Полусинтетическое"/>
+        <column name="sys_name" value="semi-synthetic"/>
+        <column name="actual" valueBoolean="true"/>
+    </insert>
+    <insert tableName="oil_type">
+        <column name="id" value="13088de4-3a7e-4b5a-8c81-ba1977fd28d4"/>
+        <column name="name" value="Минеральное"/>
+        <column name="sys_name" value="mineral"/>
+        <column name="actual" valueBoolean="true"/>
+    </insert>
+    </changeSet>
+</databaseChangeLog>
